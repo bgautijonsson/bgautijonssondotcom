@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown | Brynjólfur Gauti Jónsson</title>
+    <link>/tags/r-markdown/</link>
+      <atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <description>R Markdown</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>R Markdown</title>
+      <link>/tags/r-markdown/</link>
+    </image>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/hello-world/</guid>
+      <description>&lt;h1 id=&#34;this-is-a-header&#34;&gt;This is a header&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;caption&gt;Table 1: This is a table&lt;/caption&gt;
+ &lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;border-bottom:hidden&#34; colspan=&#34;1&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; &#34; colspan=&#34;2&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px; &#34;&gt;Automatic/Manual&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; cyl &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 0 &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 1 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 4 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 22.900 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 28.07500 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 6 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 19.125 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 20.56667 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 8 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 15.050 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 15.40000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

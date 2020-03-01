@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Brynjólfur Gauti Jónsson</title>
+    <link>/is/project/</link>
+      <atom:link href="/is/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>is</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Projects</title>
+      <link>/is/project/</link>
+    </image>
+    
+    <item>
+      <title>Áhættureiknir</title>
+      <link>/is/project/ah%C3%A6ttureiknir/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/is/project/ah%C3%A6ttureiknir/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

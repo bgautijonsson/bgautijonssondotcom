@@ -1,0 +1,18 @@
+# Theme metadata
+name = "bgj"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#005691"
+
+# Menu
+menu_primary = "#005691"
+menu_text = "#fafafa"
+menu_text_active = "769fcd"
+menu_title = "#fafafa"
+
+# Home sections
+home_section_odd = "#fafafa"
+home_section_even = "#e8f1f5"
