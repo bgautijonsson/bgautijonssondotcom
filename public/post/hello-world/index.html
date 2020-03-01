@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="This is a header Table 1: This is a table    Automatic/Manual   cyl  0  1      4  22.900  28.07500    6  19.125  20.56667    8  15.050  15.40000     ">
+  <meta name="description" content="This is a header library(tidyverse); library(kableExtra); library(cowplot); library(scales); library(DT) theme_set(theme_cowplot() &#43; background_grid(major = &quot;xy&quot;, minor = &quot;xy&quot;, size.major = 0.25, size.minor = 0.1) &#43; theme(legend.position = &quot;top&quot;, plot.margin = margin(10, 10, 10, 10)))  ggplot(mtcars, aes(wt, mpg)) &#43; geom_smooth() &#43; geom_point() &#43; labs(title = &quot;This is a plot&quot;)  mtcars %&gt;% group_by(am, cyl) %&gt;% summarise(mpg = mean(mpg)) %&gt;% spread(cyl, mpg) %&gt;% kable(&quot;html&quot;, caption = &quot;This is a table&quot;) %&gt;% kable_styling(bootstrap_options = &quot;striped&quot;,position = &quot;center&quot;, full_width = F) %&gt;% add_header_above(c(&quot;&quot;, &quot;Cylinders&quot; = 3))  Table 1: This is a table    Cylinders   am  4  6  8      0  22.">
 
   
   <link rel="alternate" hreflang="is" href="/is/post/hello-world/">
@@ -238,7 +238,7 @@
   <meta property="og:site_name" content="Brynjólfur Gauti Jónsson">
   <meta property="og:url" content="/post/hello-world/">
   <meta property="og:title" content="Hello World! | Brynjólfur Gauti Jónsson">
-  <meta property="og:description" content="This is a header Table 1: This is a table    Automatic/Manual   cyl  0  1      4  22.900  28.07500    6  19.125  20.56667    8  15.050  15.40000     "><meta property="og:image" content="/img/avatar.jpg">
+  <meta property="og:description" content="This is a header library(tidyverse); library(kableExtra); library(cowplot); library(scales); library(DT) theme_set(theme_cowplot() &#43; background_grid(major = &quot;xy&quot;, minor = &quot;xy&quot;, size.major = 0.25, size.minor = 0.1) &#43; theme(legend.position = &quot;top&quot;, plot.margin = margin(10, 10, 10, 10)))  ggplot(mtcars, aes(wt, mpg)) &#43; geom_smooth() &#43; geom_point() &#43; labs(title = &quot;This is a plot&quot;)  mtcars %&gt;% group_by(am, cyl) %&gt;% summarise(mpg = mean(mpg)) %&gt;% spread(cyl, mpg) %&gt;% kable(&quot;html&quot;, caption = &quot;This is a table&quot;) %&gt;% kable_styling(bootstrap_options = &quot;striped&quot;,position = &quot;center&quot;, full_width = F) %&gt;% add_header_above(c(&quot;&quot;, &quot;Cylinders&quot; = 3))  Table 1: This is a table    Cylinders   am  4  6  8      0  22."><meta property="og:image" content="/img/avatar.jpg">
   <meta property="twitter:image" content="/img/avatar.jpg"><meta property="og:locale" content="en-us">
   
     
@@ -288,7 +288,7 @@
       "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "This is a header Table 1: This is a table    Automatic/Manual   cyl  0  1      4  22.900  28.07500    6  19.125  20.56667    8  15.050  15.40000     "
+  "description": "This is a header library(tidyverse); library(kableExtra); library(cowplot); library(scales); library(DT) theme_set(theme_cowplot() + background_grid(major = \u0026quot;xy\u0026quot;, minor = \u0026quot;xy\u0026quot;, size.major = 0.25, size.minor = 0.1) + theme(legend.position = \u0026quot;top\u0026quot;, plot.margin = margin(10, 10, 10, 10)))  ggplot(mtcars, aes(wt, mpg)) + geom_smooth() + geom_point() + labs(title = \u0026quot;This is a plot\u0026quot;)  mtcars %\u0026gt;% group_by(am, cyl) %\u0026gt;% summarise(mpg = mean(mpg)) %\u0026gt;% spread(cyl, mpg) %\u0026gt;% kable(\u0026quot;html\u0026quot;, caption = \u0026quot;This is a table\u0026quot;) %\u0026gt;% kable_styling(bootstrap_options = \u0026quot;striped\u0026quot;,position = \u0026quot;center\u0026quot;, full_width = F) %\u0026gt;% add_header_above(c(\u0026quot;\u0026quot;, \u0026quot;Cylinders\u0026quot; = 3))  Table 1: This is a table    Cylinders   am  4  6  8      0  22."
 }
 </script>
 
@@ -626,38 +626,62 @@
 
     <div class="article-style">
       <h1 id="this-is-a-header">This is a header</h1>
-<p><img src="/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<pre><code class="language-r">library(tidyverse); library(kableExtra);  library(cowplot); library(scales); library(DT)
+theme_set(theme_cowplot() +  
+              background_grid(major = &quot;xy&quot;, 
+                              minor = &quot;xy&quot;,
+                              size.major = 0.25,
+                              size.minor = 0.1) +
+              theme(legend.position = &quot;top&quot;,
+                    plot.margin = margin(10, 10, 10, 10)))
+</code></pre>
+<pre><code class="language-r">ggplot(mtcars, aes(wt, mpg)) +
+  geom_smooth() +
+  geom_point() +
+  labs(title = &quot;This is a plot&quot;)
+</code></pre>
+<p><img src="/en/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
+<pre><code class="language-r">mtcars %&gt;% 
+  group_by(am, cyl) %&gt;% 
+  summarise(mpg = mean(mpg)) %&gt;% 
+  spread(cyl, mpg) %&gt;% 
+  kable(&quot;html&quot;, caption = &quot;This is a table&quot;) %&gt;% 
+  kable_styling(bootstrap_options = &quot;striped&quot;,position = &quot;center&quot;, full_width = F) %&gt;% 
+  add_header_above(c(&quot;&quot;, &quot;Cylinders&quot; = 3))
+</code></pre>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>Table 1: This is a table</caption>
  <thead>
 <tr>
 <th style="border-bottom:hidden" colspan="1"></th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Automatic/Manual</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Cylinders</div></th>
 </tr>
   <tr>
-   <th style="text-align:right;"> cyl </th>
-   <th style="text-align:right;"> 0 </th>
-   <th style="text-align:right;"> 1 </th>
+   <th style="text-align:right;"> am </th>
+   <th style="text-align:right;"> 4 </th>
+   <th style="text-align:right;"> 6 </th>
+   <th style="text-align:right;"> 8 </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 0 </td>
    <td style="text-align:right;"> 22.900 </td>
-   <td style="text-align:right;"> 28.07500 </td>
+   <td style="text-align:right;"> 19.12500 </td>
+   <td style="text-align:right;"> 15.05 </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 19.125 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 28.075 </td>
    <td style="text-align:right;"> 20.56667 </td>
-  </tr>
-  <tr>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 15.050 </td>
-   <td style="text-align:right;"> 15.40000 </td>
+   <td style="text-align:right;"> 15.40 </td>
   </tr>
 </tbody>
 </table>
+<p><em>This is math:</em></p>
+<p>$$
+e^{i\pi} - 1 = 0
+$$</p>
 
     </div>
 

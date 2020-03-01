@@ -530,7 +530,7 @@
       <h2><a href="/post/hello-world/" >Hello World!</a></h2>
       <div class="article-style">
         
-          This is a header Table 1: This is a table    Automatic/Manual   cyl  0  1      4  22.900  28.07500    6  19.125  20.56667    8  15.050  15.40000     
+          This is a header library(tidyverse); library(kableExtra); library(cowplot); library(scales); library(DT) theme_set(theme_cowplot() + background_grid(major = &quot;xy&quot;, minor = &quot;xy&quot;, size.major = 0.25, size.minor = 0.1) + theme(legend.position = &quot;top&quot;, plot.margin = margin(10, 10, 10, 10)))  ggplot(mtcars, aes(wt, mpg)) + geom_smooth() + geom_point() + labs(title = &quot;This is a plot&quot;)  mtcars %&gt;% group_by(am, cyl) %&gt;% summarise(mpg = mean(mpg)) %&gt;% spread(cyl, mpg) %&gt;% kable(&quot;html&quot;, caption = &quot;This is a table&quot;) %&gt;% kable_styling(bootstrap_options = &quot;striped&quot;,position = &quot;center&quot;, full_width = F) %&gt;% add_header_above(c(&quot;&quot;, &quot;Cylinders&quot; = 3))  Table 1: This is a table    Cylinders   am  4  6  8      0  22.
         
       </div>
     </div>

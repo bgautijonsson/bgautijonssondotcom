@@ -82,38 +82,62 @@
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/hello-world/</guid>
       <description>&lt;h1 id=&#34;this-is-a-header&#34;&gt;This is a header&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
-&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse); library(kableExtra);  library(cowplot); library(scales); library(DT)
+theme_set(theme_cowplot() +  
+              background_grid(major = &amp;quot;xy&amp;quot;, 
+                              minor = &amp;quot;xy&amp;quot;,
+                              size.major = 0.25,
+                              size.minor = 0.1) +
+              theme(legend.position = &amp;quot;top&amp;quot;,
+                    plot.margin = margin(10, 10, 10, 10)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(mtcars, aes(wt, mpg)) +
+  geom_smooth() +
+  geom_point() +
+  labs(title = &amp;quot;This is a plot&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/en/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;mtcars %&amp;gt;% 
+  group_by(am, cyl) %&amp;gt;% 
+  summarise(mpg = mean(mpg)) %&amp;gt;% 
+  spread(cyl, mpg) %&amp;gt;% 
+  kable(&amp;quot;html&amp;quot;, caption = &amp;quot;This is a table&amp;quot;) %&amp;gt;% 
+  kable_styling(bootstrap_options = &amp;quot;striped&amp;quot;,position = &amp;quot;center&amp;quot;, full_width = F) %&amp;gt;% 
+  add_header_above(c(&amp;quot;&amp;quot;, &amp;quot;Cylinders&amp;quot; = 3))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table table-striped&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;caption&gt;Table 1: This is a table&lt;/caption&gt;
  &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&#34;border-bottom:hidden&#34; colspan=&#34;1&#34;&gt;&lt;/th&gt;
-&lt;th style=&#34;border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; &#34; colspan=&#34;2&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px; &#34;&gt;Automatic/Manual&lt;/div&gt;&lt;/th&gt;
+&lt;th style=&#34;border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; &#34; colspan=&#34;3&#34;&gt;&lt;div style=&#34;border-bottom: 1px solid #ddd; padding-bottom: 5px; &#34;&gt;Cylinders&lt;/div&gt;&lt;/th&gt;
 &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;th style=&#34;text-align:right;&#34;&gt; cyl &lt;/th&gt;
-   &lt;th style=&#34;text-align:right;&#34;&gt; 0 &lt;/th&gt;
-   &lt;th style=&#34;text-align:right;&#34;&gt; 1 &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; am &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 4 &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 6 &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; 8 &lt;/th&gt;
   &lt;/tr&gt;
  &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 4 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 22.900 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 28.07500 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 19.12500 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 15.05 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 6 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 19.125 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 28.075 &lt;/td&gt;
    &lt;td style=&#34;text-align:right;&#34;&gt; 20.56667 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 8 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 15.050 &lt;/td&gt;
-   &lt;td style=&#34;text-align:right;&#34;&gt; 15.40000 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 15.40 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;em&gt;This is math:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;$$
+e^{i\pi} - 1 = 0
+$$&lt;/p&gt;
 </description>
     </item>
     
