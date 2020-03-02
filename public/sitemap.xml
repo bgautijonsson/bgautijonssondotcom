@@ -28,37 +28,32 @@
   </url>
   
   <url>
-    <loc>/post/asd/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-03-02T00:01:59+00:00</lastmod>
+    <lastmod>2020-03-01T00:22:15+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/hello-world/</loc>
+    <lastmod>2020-03-01T00:22:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-03-01T00:22:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-03-01T00:22:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2020-03-01T00:22:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2020-03-01T00:22:15+00:00</lastmod>
   </url>
   
@@ -133,12 +128,12 @@
   </url>
   
   <url>
-    <loc>/project/</loc>
+    <loc>/project/ah%C3%A6ttureiknir/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/ah%C3%A6ttureiknir/</loc>
+    <loc>/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
