@@ -4,8 +4,8 @@ external_link: https://bgautijonsson.shinyapps.io/ahaettureiknir/
 image:
   caption: Photo by Toa Heftiba on Unsplash
   focal_point: Smart
-summary: Áhættureiknir fyrir bráðar endurinnlagnir á geðsviði. Tilnefndur til Nýsköpunarverðlauna Forseta Íslands ásamt Þórarni Jónmundssyni.
+summary: Personalised risk calculator for patients’ short-term re-admittance to psychiatric wards I developed with Þórarinn Jónmundsson.
 tags:
 - Demo
-title: Áhættureiknir
+title: Personalized Risk Calculator
 ---
