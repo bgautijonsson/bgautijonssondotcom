@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1583107343722.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "718DCFAD",
+    "lastKnownWriteTime" : 1583106947,
+    "last_content_update" : 1583107345340,
+    "path" : "~/bgautijonsson.com/content/post/2020-03-01-hello-world.Rmarkdown",
+    "project_path" : "content/post/2020-03-01-hello-world.Rmarkdown",
+    "properties" : {
+        "cursorPosition" : "21,0",
+        "last_setup_crc32" : "EC81C01Fade07747",
+        "scrollLine" : "8"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

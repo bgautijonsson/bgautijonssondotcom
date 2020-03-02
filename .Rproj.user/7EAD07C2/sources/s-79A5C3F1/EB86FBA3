@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1583107319873.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EB86FBA3",
+    "lastKnownWriteTime" : 1583107430,
+    "last_content_update" : 1583107430258,
+    "path" : "~/bgautijonsson.com/content/post/2020-03-02-asd.Rmd",
+    "project_path" : "content/post/2020-03-02-asd.Rmd",
+    "properties" : {
+        "cursorPosition" : "23,3",
+        "scrollLine" : "1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
