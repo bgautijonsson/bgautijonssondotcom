@@ -1,1 +1,1 @@
-This is the github repo for [my webpage](https://bgautijonsson.com). It is continuously integrated via [netlify](https://netlify.com), so that whenever this repository is updates, the webpage is also updated.
+This is the github repo for [my webpage](https://bgautijonsson.com). It is continuously integrated via [netlify](https://netlify.com), so that whenever this repository is updated, the webpage is also updated.
