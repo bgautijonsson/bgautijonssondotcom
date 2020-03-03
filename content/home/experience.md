@@ -46,7 +46,7 @@ date_format = "Jan 2006"
   Teaching classes on:<br>
   * Data Analysis
   * Statistical Consulting
-  * Intriductory Statistics
+  * Introductory Statistics
   * Survival Analysis
   """
   
