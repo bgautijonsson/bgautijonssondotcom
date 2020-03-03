@@ -51,7 +51,7 @@ date_format = "Jan 2006"
 [[item]]
   organization = "DataCamp"
   organization_url = "https://www.datacamp.com"
-  title = "Data Scienctist with R Track"
+  title = "Data Scientist with R Track"
   url = ""
   certificate_url = "https://www.datacamp.com/statement-of-accomplishment/track/36e1da30eb4aaa4bcb5580714290b7f1aaafb8b4"
   date_start = "2018-03-01"
