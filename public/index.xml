@@ -300,13 +300,22 @@ Three
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       <guid>/courses/survival/probabilitydistributions/</guid>
       <description>&lt;h2 id=&#34;some-probability-distributions&#34;&gt;Some Probability Distributions&lt;/h2&gt;
+
 &lt;h3 id=&#34;discrete&#34;&gt;Discrete&lt;/h3&gt;
+
 &lt;h4 id=&#34;bernoulli&#34;&gt;Bernoulli&lt;/h4&gt;
+
 &lt;p&gt;A random variable &lt;code&gt;\(X\)&lt;/code&gt; is said to have the &lt;em&gt;Bernoulli distribution&lt;/em&gt; with parameter &lt;code&gt;\(p\)&lt;/code&gt; if&lt;/p&gt;
-&lt;p&gt;$$
-&lt;code&gt;\begin{aligned} P(X=1) &amp;amp;= p, \quad \text{and} \\ P(X=0) &amp;amp;= 1 - p, \quad \text{where } 0 &amp;lt; p &amp;lt; 1. \end{aligned}&lt;/code&gt;
-$$&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+`\begin{aligned}
+P(X=1) &amp;= p, \quad \text{and} \\
+P(X=0) &amp;= 1 - p, \quad \text{where } 0 &lt; p &lt; 1.
+\end{aligned}`
+\]&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;We write this as &lt;code&gt;\(X \sim \mathrm{Bern}(p)\)&lt;/code&gt;. All random variables whose possible values are &lt;code&gt;\(0\)&lt;/code&gt; and &lt;code&gt;\(1\)&lt;/code&gt; follow this distribution.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;p &amp;lt;- 0.3
 success &amp;lt;- p
 failure &amp;lt;- 1 - p
@@ -318,9 +327,13 @@ tibble(outcome = c(&amp;quot;Success&amp;quot;, &amp;quot;Failure&amp;quot;),
     labs(title = &amp;quot;Example Bernoulli variable&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&#34;binomial&#34;&gt;Binomial&lt;/h4&gt;
+
 &lt;p&gt;Suppose that we have &lt;em&gt;n independent&lt;/em&gt; Bernoulli random variables sampled from an experiment, each with the same probability, &lt;code&gt;\(p\)&lt;/code&gt;, of success. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of successes. Then &lt;code&gt;\(X\)&lt;/code&gt; has a &lt;em&gt;Binomial distribution&lt;/em&gt; with parameters &lt;code&gt;\(n\)&lt;/code&gt; and &lt;code&gt;\(p\)&lt;/code&gt;. We write &lt;code&gt;\(X \sim \mathrm{Bin}(n, p)\)&lt;/code&gt;. Thus the &lt;code&gt;\(\mathrm{Bern}(p)\)&lt;/code&gt; distribution is the same as &lt;code&gt;\(\mathrm{Bin}(1, p)\)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;coin_tosses &amp;lt;- 100
 possible_outcomes &amp;lt;- seq(0, 100)
 probability_of_outcomes &amp;lt;- dbinom(x = possible_outcomes, size = coin_tosses, prob = 0.5)
@@ -334,11 +347,17 @@ tibble(outcome = possible_outcomes,
          subtitle = &amp;quot;Probability of obtaining X heads in 100 tosses&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&#34;geometric&#34;&gt;Geometric&lt;/h4&gt;
+
 &lt;p&gt;Consider a sequence of independent Bernoulli trials, each with the same success probability, &lt;code&gt;\(p\)&lt;/code&gt;, and imagine performing trials until a success occurs. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of &lt;em&gt;failures&lt;/em&gt; before the first successful trial. Then &lt;code&gt;\(X\)&lt;/code&gt; has the &lt;em&gt;Geometric distribution&lt;/em&gt; with parameter &lt;code&gt;\(p\)&lt;/code&gt;, denoted by &lt;code&gt;\(X \sim \mathrm{Geom}(p)\)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;p&gt;This is an important distribution for survival analysis. Imagine that on each day there is a constant probability, &lt;code&gt;\(p\)&lt;/code&gt;, that some event happens. Then the number of days before the event happens follows a &lt;code&gt;\(\mathrm{Geom}(p)\)&lt;/code&gt; distribution. Note that the &lt;em&gt;Geometric&lt;/em&gt; distribution only models whole numbers, so we cannot wait for &lt;code&gt;\(4.5\)&lt;/code&gt; days when working with this distribution.&lt;/p&gt;
+
 &lt;p&gt;Textbooks and statistical software differ in whether the &lt;em&gt;Geometric distribution&lt;/em&gt; models the number trials &lt;em&gt;before&lt;/em&gt; the success or the number of trials &lt;em&gt;including&lt;/em&gt; the success. The number of trials &lt;em&gt;including&lt;/em&gt; the success is sometimes called the &lt;em&gt;First Success distribution&lt;/em&gt;.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;risk &amp;lt;- 0.10
 possible_times &amp;lt;- seq(0, 50)
 probability_of_times &amp;lt;- dgeom(possible_times, risk)
@@ -352,21 +371,33 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X days until event happens with risk 10%&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;continuous&#34;&gt;Continuous&lt;/h3&gt;
+
 &lt;p&gt;For continuous variables it makes no sense to ask &lt;em&gt;what is the probability that X will be equal to x?&lt;/em&gt; since that probability, &lt;code&gt;\(P(X = x)\)&lt;/code&gt; is always &lt;code&gt;\(0\)&lt;/code&gt;. Consider the probability that the temperature outside is 23 degrees celsius. This probability is &lt;code&gt;\(0\)&lt;/code&gt; since the temperature outside is never exactly 23 degrees, rather it might be 23.01231 or 22.999923, but it is never exactly 23. Instead of the probability that a continuous random variable equals some value we talk of the &lt;em&gt;density&lt;/em&gt; of the distribution at that value.&lt;/p&gt;
+
 &lt;p&gt;On the other hand we &lt;em&gt;can&lt;/em&gt; talk about the probability that a continuous random variable, &lt;code&gt;\(X\)&lt;/code&gt;, is less than or equal to &lt;code&gt;\(x\)&lt;/code&gt; or &lt;code&gt;\(P(X \leq x)\)&lt;/code&gt;. Thus we can ask &lt;em&gt;what is the probability that the temporature outside is less than  or equall to 23?&lt;/em&gt; or &lt;code&gt;\(P(\mathrm{Temp} \leq 23)\)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;h4 id=&#34;exponential&#34;&gt;Exponential&lt;/h4&gt;
+
 &lt;p&gt;&lt;em&gt;The Exponential distribution&lt;/em&gt; is the continuous counterpart to the Geometric distribution. Instead of waiting for events in discrete days we are now waiting in continuous time for a success that occurs with rate &lt;code&gt;\(\lambda\)&lt;/code&gt; per unit of time. The average number of successes in a time interval of length &lt;code&gt;\(t\)&lt;/code&gt; is &lt;code&gt;\(\lambda t\)&lt;/code&gt;, though the actual number of successes varies.&lt;/p&gt;
+
 &lt;p&gt;If &lt;code&gt;\(X\)&lt;/code&gt; has an &lt;em&gt;Exponential distribution&lt;/em&gt; we write &lt;code&gt;\(X \sim \mathrm{Expo}(\lambda)\)&lt;/code&gt;, and the probability that an event occurs within &lt;code&gt;\(x\)&lt;/code&gt; units of time is equal to the probability that &lt;code&gt;\(X\)&lt;/code&gt; is less than or equal to &lt;code&gt;\(x\)&lt;/code&gt;, or&lt;/p&gt;
-&lt;p&gt;$$
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
 P(X \leq x) =F(x) = 1 - e^{-\lambda x}.
-$$&lt;/p&gt;
+\]&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;In survival analysis this is often called the &lt;em&gt;risk function&lt;/em&gt;. The &lt;em&gt;survivor function&lt;/em&gt; is the probability that an event has &lt;em&gt;not occurred&lt;/em&gt; within &lt;code&gt;\(x\)&lt;/code&gt; units of time, and for an &lt;em&gt;Exponential random variable&lt;/em&gt; it is written&lt;/p&gt;
-&lt;p&gt;$$
-P(X &amp;gt; x) = S(x) = 1 - (1 - e^{-\lambda x}) = e^{-\lambda x}.
-$$&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+P(X &gt; x) = S(x) = 1 - (1 - e^{-\lambda x}) = e^{-\lambda x}.
+\]&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;The &lt;em&gt;Exponential distribution&lt;/em&gt; is unique in that it is &lt;em&gt;memoryless&lt;/em&gt;. This means that the time until an event occurs is independent of how long you have been waiting for it to happen. It is obvious that the time until your bus arrives is not &lt;em&gt;exponentially&lt;/em&gt; distributed since the waiting time is not the same whether you have waited &lt;code&gt;\(0\)&lt;/code&gt;, &lt;code&gt;\(5\)&lt;/code&gt; or &lt;code&gt;\(15\)&lt;/code&gt; minutes &lt;em&gt;(although sometimes it may feel that way!)&lt;/em&gt;. Waiting times that are not memoryless are better modeled with other distributions.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 density_of_times &amp;lt;- dexp(possible_times, rate)
@@ -379,7 +410,9 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time.\nSince an exponential waiting time can take on any values we don&#39;t see a step function but a smooth curve.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 risk_function &amp;lt;- pexp(possible_times, rate)
@@ -393,7 +426,9 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 survival_function &amp;lt;- 1 - pexp(possible_times, rate)
@@ -407,20 +442,31 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&#34;weibull&#34;&gt;Weibull&lt;/h4&gt;
+
 &lt;p&gt;Remarkably, simply raising an exponential random variable to a power dramatically improves the flexibility and applicability of the distribution. Let &lt;code&gt;\(X \sim \mathrm{Expo}(\lambda)\)&lt;/code&gt; and &lt;code&gt;\(T = X^{1/\gamma}\)&lt;/code&gt; with &lt;code&gt;\(\lambda &amp;gt; 0\)&lt;/code&gt;, &lt;code&gt;\(\gamma &amp;gt; 0\)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;p&gt;The distribution of &lt;code&gt;\(T\)&lt;/code&gt; is called the &lt;em&gt;Weibull distribution&lt;/em&gt; and we denote this by &lt;code&gt;\(T \sim \mathrm{Weib}(\lambda, \gamma)\)&lt;/code&gt;. We see that if &lt;code&gt;\(\gamma = 1\)&lt;/code&gt; then &lt;code&gt;\(T\sim \mathrm{Weib}(\lambda, 1) = \mathrm{Expo}(\lambda)\)&lt;/code&gt;.&lt;/p&gt;
+
 &lt;p&gt;It is interesting to note that if &lt;code&gt;\(T = X^{1/\gamma}\)&lt;/code&gt; then &lt;code&gt;\(X = T^{\gamma}\)&lt;/code&gt;. Thus, if you have a random variable &lt;code&gt;\(T\sim \mathrm{Weib}(\lambda, \gamma)\)&lt;/code&gt;, then &lt;code&gt;\(T^\gamma \sim \mathrm{Expo}(\lambda)\)&lt;/code&gt;, and so &lt;code&gt;\(T^\gamma\)&lt;/code&gt; is memoryless,  which can be used to examine whether &lt;code&gt;\(T\)&lt;/code&gt; is actually &lt;em&gt;Weibull&lt;/em&gt; distributed.&lt;/p&gt;
+
 &lt;p&gt;The &lt;em&gt;risk function&lt;/em&gt; for a &lt;em&gt;Weibull&lt;/em&gt; random variable is&lt;/p&gt;
-&lt;p&gt;$$
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
 P(T \leq t) = F(t) = 1 - e^{\lambda t^{\gamma}}
-$$&lt;/p&gt;
+\]&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;and the &lt;em&gt;survivor function&lt;/em&gt; is&lt;/p&gt;
-&lt;p&gt;$$
-P(T &amp;gt; t) = S(t) = e^{\lambda t^\gamma}.
-$$&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
+P(T &gt; t) = S(t) = e^{\lambda t^\gamma}.
+\]&lt;/span&gt;&lt;/p&gt;
+
 &lt;p&gt;The &lt;em&gt;Weibull distribution&lt;/em&gt; is not &lt;em&gt;memoryless&lt;/em&gt;.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -434,7 +480,9 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -449,7 +497,9 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -464,6 +514,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
