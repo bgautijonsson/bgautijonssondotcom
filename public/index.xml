@@ -308,10 +308,10 @@ Three
 &lt;p&gt;A random variable &lt;code&gt;$X$&lt;/code&gt; is said to have the &lt;em&gt;Bernoulli distribution&lt;/em&gt; with parameter &lt;code&gt;\(p\)&lt;/code&gt; if&lt;/p&gt;
 
 &lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[
-`\begin{aligned}
+\begin{aligned}
 P(X=1) &amp;= p, \quad \text{and} \\
 P(X=0) &amp;= 1 - p, \quad \text{where } 0 &lt; p &lt; 1.
-\end{aligned}`
+\end{aligned}
 \]&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;We write this as &lt;code&gt;\(X \sim \mathrm{Bern}(p)\)&lt;/code&gt;. All random variables whose possible values are &lt;code&gt;\(0\)&lt;/code&gt; and &lt;code&gt;\(1\)&lt;/code&gt; follow this distribution.&lt;/p&gt;
