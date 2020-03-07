@@ -12,6 +12,8 @@ title: Survival Analysis
 toc: true
 type: docs
 weight: 1
+math: true
+markup: mmark
 ---
 
 

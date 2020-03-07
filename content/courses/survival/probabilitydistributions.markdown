@@ -12,6 +12,7 @@ title: Survival Analysis
 toc: true
 type: docs
 math: true
+markup: mmark
 ---
 
 
@@ -24,7 +25,7 @@ math: true
 
 #### Bernoulli 
 
-A random variable `\(X\)` is said to have the *Bernoulli distribution* with parameter `\(p\)` if
+A random variable `$X$` is said to have the *Bernoulli distribution* with parameter `\(p\)` if
 
 $$
 `\begin{aligned}
