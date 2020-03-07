@@ -12,7 +12,6 @@ title: Survival Analysis
 toc: true
 type: docs
 math: true
-markup: mmark
 ---
 
 ```{r setup, include=FALSE, echo = TRUE}
