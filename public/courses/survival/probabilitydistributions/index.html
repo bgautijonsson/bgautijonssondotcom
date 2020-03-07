@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Brynjólfur Gauti Jónsson">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Course notes in SurvivaL Analysis">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/courses/survival/probabilitydistributions/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#005691">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu41e573314712898bc8075ddf61e0259a_18303_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu41e573314712898bc8075ddf61e0259a_18303_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/courses/survival/probabilitydistributions/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@bgautijonsson">
+  <meta property="twitter:creator" content="@bgautijonsson">
+  
+  <meta property="og:site_name" content="Brynjólfur Gauti Jónsson">
+  <meta property="og:url" content="/courses/survival/probabilitydistributions/">
+  <meta property="og:title" content="Survival Analysis | Brynjólfur Gauti Jónsson">
+  <meta property="og:description" content="Course notes in SurvivaL Analysis"><meta property="og:image" content="/img/avatar.jpg">
+  <meta property="twitter:image" content="/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-09-09T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-09-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Survival Analysis | Brynjólfur Gauti Jónsson</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Brynjólfur Gauti Jónsson</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Brynjólfur Gauti Jónsson</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+  
+    
+  
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/survival/">Preface</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/survival/probabilitydistributions/">Introduction</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/survival/probabilitydistributions/">Some Probability Distributions</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-probability-distributions">Some Probability Distributions</a>
+      <ul>
+        <li><a href="#discrete">Discrete</a></li>
+        <li><a href="#continuous">Continuous</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Survival Analysis</h1>
+
+          <div class="article-style">
+            <h2 id="some-probability-distributions">Some Probability Distributions</h2>
+<h3 id="discrete">Discrete</h3>
+<h4 id="bernoulli">Bernoulli</h4>
+<p>A random variable <code>\(X\)</code> is said to have the <em>Bernoulli distribution</em> with parameter <code>\(p\)</code> if</p>
+<p>$$
+<code>\begin{aligned} P(X=1) &amp;= p, \quad \text{and} \\ P(X=0) &amp;= 1 - p, \quad \text{where } 0 &lt; p &lt; 1. \end{aligned}</code>
+$$</p>
+<p>We write this as <code>\(X \sim \mathrm{Bern}(p)\)</code>. All random variables whose possible values are <code>\(0\)</code> and <code>\(1\)</code> follow this distribution.</p>
+<pre><code class="language-r">p &lt;- 0.3
+success &lt;- p
+failure &lt;- 1 - p
+tibble(outcome = c(&quot;Success&quot;, &quot;Failure&quot;),
+       probability = c(success, failure)) %&gt;% 
+    ggplot(aes(outcome, probability)) +
+    geom_col() +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Example Bernoulli variable&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
+<h4 id="binomial">Binomial</h4>
+<p>Suppose that we have <em>n independent</em> Bernoulli random variables sampled from an experiment, each with the same probability, <code>\(p\)</code>, of success. Let <code>\(X\)</code> be the number of successes. Then <code>\(X\)</code> has a <em>Binomial distribution</em> with parameters <code>\(n\)</code> and <code>\(p\)</code>. We write <code>\(X \sim \mathrm{Bin}(n, p)\)</code>. Thus the <code>\(\mathrm{Bern}(p)\)</code> distribution is the same as <code>\(\mathrm{Bin}(1, p)\)</code>.</p>
+<pre><code class="language-r">coin_tosses &lt;- 100
+possible_outcomes &lt;- seq(0, 100)
+probability_of_outcomes &lt;- dbinom(x = possible_outcomes, size = coin_tosses, prob = 0.5)
+
+tibble(outcome = possible_outcomes,
+       probability = probability_of_outcomes) %&gt;% 
+    ggplot(aes(outcome, probability)) +
+    geom_col() +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Coin toss experiment&quot;,
+         subtitle = &quot;Probability of obtaining X heads in 100 tosses&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
+<h4 id="geometric">Geometric</h4>
+<p>Consider a sequence of independent Bernoulli trials, each with the same success probability, <code>\(p\)</code>, and imagine performing trials until a success occurs. Let <code>\(X\)</code> be the number of <em>failures</em> before the first successful trial. Then <code>\(X\)</code> has the <em>Geometric distribution</em> with parameter <code>\(p\)</code>, denoted by <code>\(X \sim \mathrm{Geom}(p)\)</code>.</p>
+<p>This is an important distribution for survival analysis. Imagine that on each day there is a constant probability, <code>\(p\)</code>, that some event happens. Then the number of days before the event happens follows a <code>\(\mathrm{Geom}(p)\)</code> distribution. Note that the <em>Geometric</em> distribution only models whole numbers, so we cannot wait for <code>\(4.5\)</code> days when working with this distribution.</p>
+<p>Textbooks and statistical software differ in whether the <em>Geometric distribution</em> models the number trials <em>before</em> the success or the number of trials <em>including</em> the success. The number of trials <em>including</em> the success is sometimes called the <em>First Success distribution</em>.</p>
+<pre><code class="language-r">risk &lt;- 0.10
+possible_times &lt;- seq(0, 50)
+probability_of_times &lt;- dgeom(possible_times, risk)
+
+tibble(time = possible_times,
+       probability = probability_of_times) %&gt;% 
+    ggplot(aes(time, probability)) +
+    geom_col() +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Geometic experiment&quot;,
+         subtitle = &quot;Probability of waiting X days until event happens with risk 10%&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png" width="100%" /></p>
+<h3 id="continuous">Continuous</h3>
+<p>For continuous variables it makes no sense to ask <em>what is the probability that X will be equal to x?</em> since that probability, <code>\(P(X = x)\)</code> is always <code>\(0\)</code>. Consider the probability that the temperature outside is 23 degrees celsius. This probability is <code>\(0\)</code> since the temperature outside is never exactly 23 degrees, rather it might be 23.01231 or 22.999923, but it is never exactly 23. Instead of the probability that a continuous random variable equals some value we talk of the <em>density</em> of the distribution at that value.</p>
+<p>On the other hand we <em>can</em> talk about the probability that a continuous random variable, <code>\(X\)</code>, is less than or equal to <code>\(x\)</code> or <code>\(P(X \leq x)\)</code>. Thus we can ask <em>what is the probability that the temporature outside is less than  or equall to 23?</em> or <code>\(P(\mathrm{Temp} \leq 23)\)</code>.</p>
+<h4 id="exponential">Exponential</h4>
+<p><em>The Exponential distribution</em> is the continuous counterpart to the Geometric distribution. Instead of waiting for events in discrete days we are now waiting in continuous time for a success that occurs with rate <code>\(\lambda\)</code> per unit of time. The average number of successes in a time interval of length <code>\(t\)</code> is <code>\(\lambda t\)</code>, though the actual number of successes varies.</p>
+<p>If <code>\(X\)</code> has an <em>Exponential distribution</em> we write <code>\(X \sim \mathrm{Expo}(\lambda)\)</code>, and the probability that an event occurs within <code>\(x\)</code> units of time is equal to the probability that <code>\(X\)</code> is less than or equal to <code>\(x\)</code>, or</p>
+<p>$$
+P(X \leq x) =F(x) = 1 - e^{-\lambda x}.
+$$</p>
+<p>In survival analysis this is often called the <em>risk function</em>. The <em>survivor function</em> is the probability that an event has <em>not occurred</em> within <code>\(x\)</code> units of time, and for an <em>Exponential random variable</em> it is written</p>
+<p>$$
+P(X &gt; x) = S(x) = 1 - (1 - e^{-\lambda x}) = e^{-\lambda x}.
+$$</p>
+<p>The <em>Exponential distribution</em> is unique in that it is <em>memoryless</em>. This means that the time until an event occurs is independent of how long you have been waiting for it to happen. It is obvious that the time until your bus arrives is not <em>exponentially</em> distributed since the waiting time is not the same whether you have waited <code>\(0\)</code>, <code>\(5\)</code> or <code>\(15\)</code> minutes <em>(although sometimes it may feel that way!)</em>. Waiting times that are not memoryless are better modeled with other distributions.</p>
+<pre><code class="language-r">rate &lt;- 0.1
+possible_times &lt;- seq(0, 50)
+density_of_times &lt;- dexp(possible_times, rate)
+
+tibble(time = possible_times,
+       density = density_of_times) %&gt;% 
+    ggplot(aes(time, density)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    labs(title = &quot;Exponential experiment: Density&quot;,
+         subtitle = &quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time.\nSince an exponential waiting time can take on any values we don't see a step function but a smooth curve.&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png" width="100%" /></p>
+<pre><code class="language-r">rate &lt;- 0.1
+possible_times &lt;- seq(0, 50)
+risk_function &lt;- pexp(possible_times, rate)
+
+tibble(time = possible_times,
+       risk = risk_function) %&gt;% 
+    ggplot(aes(time, risk)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Exponential experiment: Risk function&quot;,
+         subtitle = &quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time.&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png" width="100%" /></p>
+<pre><code class="language-r">rate &lt;- 0.1
+possible_times &lt;- seq(0, 50)
+survival_function &lt;- 1 - pexp(possible_times, rate)
+
+tibble(time = possible_times,
+       survival = survival_function) %&gt;% 
+    ggplot(aes(time, survival)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Exponential experiment: Survival function&quot;,
+         subtitle = &quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time.&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
+<h4 id="weibull">Weibull</h4>
+<p>Remarkably, simply raising an exponential random variable to a power dramatically improves the flexibility and applicability of the distribution. Let <code>\(X \sim \mathrm{Expo}(\lambda)\)</code> and <code>\(T = X^{1/\gamma}\)</code> with <code>\(\lambda &gt; 0\)</code>, <code>\(\gamma &gt; 0\)</code>.</p>
+<p>The distribution of <code>\(T\)</code> is called the <em>Weibull distribution</em> and we denote this by <code>\(T \sim \mathrm{Weib}(\lambda, \gamma)\)</code>. We see that if <code>\(\gamma = 1\)</code> then <code>\(T\sim \mathrm{Weib}(\lambda, 1) = \mathrm{Expo}(\lambda)\)</code>.</p>
+<p>It is interesting to note that if <code>\(T = X^{1/\gamma}\)</code> then <code>\(X = T^{\gamma}\)</code>. Thus, if you have a random variable <code>\(T\sim \mathrm{Weib}(\lambda, \gamma)\)</code>, then <code>\(T^\gamma \sim \mathrm{Expo}(\lambda)\)</code>, and so <code>\(T^\gamma\)</code> is memoryless,  which can be used to examine whether <code>\(T\)</code> is actually <em>Weibull</em> distributed.</p>
+<p>The <em>risk function</em> for a <em>Weibull</em> random variable is</p>
+<p>$$
+P(T \leq t) = F(t) = 1 - e^{\lambda t^{\gamma}}
+$$</p>
+<p>and the <em>survivor function</em> is</p>
+<p>$$
+P(T &gt; t) = S(t) = e^{\lambda t^\gamma}.
+$$</p>
+<p>The <em>Weibull distribution</em> is not <em>memoryless</em>.</p>
+<pre><code class="language-r">rate &lt;- 0.1
+shape &lt;- 2
+possible_times &lt;- seq(0, 50, length.out = 1000)
+density_of_times &lt;- dweibull(possible_times, shape = shape, scale = 1 / rate)
+
+tibble(time = possible_times,
+       density = density_of_times) %&gt;% 
+    ggplot(aes(time, density)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    labs(title = &quot;Weibull experiment: Density&quot;,
+         subtitle = &quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png" width="100%" /></p>
+<pre><code class="language-r">rate &lt;- 0.1
+shape &lt;- 2
+possible_times &lt;- seq(0, 50, length.out = 1000)
+density_of_times &lt;- pweibull(possible_times, shape = shape, scale = 1 / rate)
+
+tibble(time = possible_times,
+       density = density_of_times) %&gt;% 
+    ggplot(aes(time, density)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Weibull experiment: Risk function&quot;,
+         subtitle = &quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png" width="100%" /></p>
+<pre><code class="language-r">rate &lt;- 0.1
+shape &lt;- 2
+possible_times &lt;- seq(0, 50, length.out = 1000)
+density_of_times &lt;- 1 - pweibull(possible_times, shape = shape, scale = 1 / rate)
+
+tibble(time = possible_times,
+       density = density_of_times) %&gt;% 
+    ggplot(aes(time, density)) +
+    geom_area(fill = &quot;grey30&quot;) +
+    scale_y_continuous(labels = percent) +
+    labs(title = &quot;Weibull experiment: Survivor function&quot;,
+         subtitle = &quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
+    theme(axis.title = element_blank())
+</code></pre>
+<p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png" width="100%" /></p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 97/09, 2018</p>
+
+          
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/survival/probabilitydistributions.markdown">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
