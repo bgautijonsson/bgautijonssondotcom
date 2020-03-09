@@ -12,7 +12,7 @@ title: Survival Analysis
 toc: true
 type: docs
 math: true
-markup: mmark
+markup: md
 ---
 
 
@@ -25,13 +25,13 @@ markup: mmark
 
 #### Bernoulli 
 
-A random variable `$X$` is said to have the *Bernoulli distribution* with parameter `\(p\)` if
+A random variable `\(X\)` is said to have the *Bernoulli distribution* with parameter `\(p\)` if
 
 $$
-\begin{aligned}
+`\begin{aligned}
 P(X=1) &= p, \quad \text{and} \\
 P(X=0) &= 1 - p, \quad \text{where } 0 < p < 1.
-\end{aligned}
+\end{aligned}`
 $$
 
 We write this as `\(X \sim \mathrm{Bern}(p)\)`. All random variables whose possible values are `\(0\)` and `\(1\)` follow this distribution. 

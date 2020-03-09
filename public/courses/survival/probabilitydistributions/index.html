@@ -537,7 +537,16 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-probability-distributions">Some Probability Distributions</a>
+      <ul>
+        <li><a href="#discrete">Discrete</a></li>
+        <li><a href="#continuous">Continuous</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
       
     </div>
@@ -552,22 +561,13 @@
 
           <div class="article-style">
             <h2 id="some-probability-distributions">Some Probability Distributions</h2>
-
 <h3 id="discrete">Discrete</h3>
-
 <h4 id="bernoulli">Bernoulli</h4>
-
-<p>A random variable <code>$X$</code> is said to have the <em>Bernoulli distribution</em> with parameter <code>\(p\)</code> if</p>
-
-<p><span  class="math">\[
-\begin{aligned}
-P(X=1) &= p, \quad \text{and} \\
-P(X=0) &= 1 - p, \quad \text{where } 0 < p < 1.
-\end{aligned}
-\]</span></p>
-
+<p>A random variable <code>\(X\)</code> is said to have the <em>Bernoulli distribution</em> with parameter <code>\(p\)</code> if</p>
+<p>$$
+<code>\begin{aligned} P(X=1) &amp;= p, \quad \text{and} \\ P(X=0) &amp;= 1 - p, \quad \text{where } 0 &lt; p &lt; 1. \end{aligned}</code>
+$$</p>
 <p>We write this as <code>\(X \sim \mathrm{Bern}(p)\)</code>. All random variables whose possible values are <code>\(0\)</code> and <code>\(1\)</code> follow this distribution.</p>
-
 <pre><code class="language-r">p &lt;- 0.3
 success &lt;- p
 failure &lt;- 1 - p
@@ -579,13 +579,9 @@ tibble(outcome = c(&quot;Success&quot;, &quot;Failure&quot;),
     labs(title = &quot;Example Bernoulli variable&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
-
 <h4 id="binomial">Binomial</h4>
-
 <p>Suppose that we have <em>n independent</em> Bernoulli random variables sampled from an experiment, each with the same probability, <code>\(p\)</code>, of success. Let <code>\(X\)</code> be the number of successes. Then <code>\(X\)</code> has a <em>Binomial distribution</em> with parameters <code>\(n\)</code> and <code>\(p\)</code>. We write <code>\(X \sim \mathrm{Bin}(n, p)\)</code>. Thus the <code>\(\mathrm{Bern}(p)\)</code> distribution is the same as <code>\(\mathrm{Bin}(1, p)\)</code>.</p>
-
 <pre><code class="language-r">coin_tosses &lt;- 100
 possible_outcomes &lt;- seq(0, 100)
 probability_of_outcomes &lt;- dbinom(x = possible_outcomes, size = coin_tosses, prob = 0.5)
@@ -599,17 +595,11 @@ tibble(outcome = possible_outcomes,
          subtitle = &quot;Probability of obtaining X heads in 100 tosses&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
-
 <h4 id="geometric">Geometric</h4>
-
 <p>Consider a sequence of independent Bernoulli trials, each with the same success probability, <code>\(p\)</code>, and imagine performing trials until a success occurs. Let <code>\(X\)</code> be the number of <em>failures</em> before the first successful trial. Then <code>\(X\)</code> has the <em>Geometric distribution</em> with parameter <code>\(p\)</code>, denoted by <code>\(X \sim \mathrm{Geom}(p)\)</code>.</p>
-
 <p>This is an important distribution for survival analysis. Imagine that on each day there is a constant probability, <code>\(p\)</code>, that some event happens. Then the number of days before the event happens follows a <code>\(\mathrm{Geom}(p)\)</code> distribution. Note that the <em>Geometric</em> distribution only models whole numbers, so we cannot wait for <code>\(4.5\)</code> days when working with this distribution.</p>
-
 <p>Textbooks and statistical software differ in whether the <em>Geometric distribution</em> models the number trials <em>before</em> the success or the number of trials <em>including</em> the success. The number of trials <em>including</em> the success is sometimes called the <em>First Success distribution</em>.</p>
-
 <pre><code class="language-r">risk &lt;- 0.10
 possible_times &lt;- seq(0, 50)
 probability_of_times &lt;- dgeom(possible_times, risk)
@@ -623,33 +613,21 @@ tibble(time = possible_times,
          subtitle = &quot;Probability of waiting X days until event happens with risk 10%&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png" width="100%" /></p>
-
 <h3 id="continuous">Continuous</h3>
-
 <p>For continuous variables it makes no sense to ask <em>what is the probability that X will be equal to x?</em> since that probability, <code>\(P(X = x)\)</code> is always <code>\(0\)</code>. Consider the probability that the temperature outside is 23 degrees celsius. This probability is <code>\(0\)</code> since the temperature outside is never exactly 23 degrees, rather it might be 23.01231 or 22.999923, but it is never exactly 23. Instead of the probability that a continuous random variable equals some value we talk of the <em>density</em> of the distribution at that value.</p>
-
 <p>On the other hand we <em>can</em> talk about the probability that a continuous random variable, <code>\(X\)</code>, is less than or equal to <code>\(x\)</code> or <code>\(P(X \leq x)\)</code>. Thus we can ask <em>what is the probability that the temporature outside is less than  or equall to 23?</em> or <code>\(P(\mathrm{Temp} \leq 23)\)</code>.</p>
-
 <h4 id="exponential">Exponential</h4>
-
 <p><em>The Exponential distribution</em> is the continuous counterpart to the Geometric distribution. Instead of waiting for events in discrete days we are now waiting in continuous time for a success that occurs with rate <code>\(\lambda\)</code> per unit of time. The average number of successes in a time interval of length <code>\(t\)</code> is <code>\(\lambda t\)</code>, though the actual number of successes varies.</p>
-
 <p>If <code>\(X\)</code> has an <em>Exponential distribution</em> we write <code>\(X \sim \mathrm{Expo}(\lambda)\)</code>, and the probability that an event occurs within <code>\(x\)</code> units of time is equal to the probability that <code>\(X\)</code> is less than or equal to <code>\(x\)</code>, or</p>
-
-<p><span  class="math">\[
+<p>$$
 P(X \leq x) =F(x) = 1 - e^{-\lambda x}.
-\]</span></p>
-
+$$</p>
 <p>In survival analysis this is often called the <em>risk function</em>. The <em>survivor function</em> is the probability that an event has <em>not occurred</em> within <code>\(x\)</code> units of time, and for an <em>Exponential random variable</em> it is written</p>
-
-<p><span  class="math">\[
-P(X > x) = S(x) = 1 - (1 - e^{-\lambda x}) = e^{-\lambda x}.
-\]</span></p>
-
+<p>$$
+P(X &gt; x) = S(x) = 1 - (1 - e^{-\lambda x}) = e^{-\lambda x}.
+$$</p>
 <p>The <em>Exponential distribution</em> is unique in that it is <em>memoryless</em>. This means that the time until an event occurs is independent of how long you have been waiting for it to happen. It is obvious that the time until your bus arrives is not <em>exponentially</em> distributed since the waiting time is not the same whether you have waited <code>\(0\)</code>, <code>\(5\)</code> or <code>\(15\)</code> minutes <em>(although sometimes it may feel that way!)</em>. Waiting times that are not memoryless are better modeled with other distributions.</p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 possible_times &lt;- seq(0, 50)
 density_of_times &lt;- dexp(possible_times, rate)
@@ -662,9 +640,7 @@ tibble(time = possible_times,
          subtitle = &quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time.\nSince an exponential waiting time can take on any values we don't see a step function but a smooth curve.&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png" width="100%" /></p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 possible_times &lt;- seq(0, 50)
 risk_function &lt;- pexp(possible_times, rate)
@@ -678,9 +654,7 @@ tibble(time = possible_times,
          subtitle = &quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time.&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png" width="100%" /></p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 possible_times &lt;- seq(0, 50)
 survival_function &lt;- 1 - pexp(possible_times, rate)
@@ -694,31 +668,20 @@ tibble(time = possible_times,
          subtitle = &quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time.&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
-
 <h4 id="weibull">Weibull</h4>
-
 <p>Remarkably, simply raising an exponential random variable to a power dramatically improves the flexibility and applicability of the distribution. Let <code>\(X \sim \mathrm{Expo}(\lambda)\)</code> and <code>\(T = X^{1/\gamma}\)</code> with <code>\(\lambda &gt; 0\)</code>, <code>\(\gamma &gt; 0\)</code>.</p>
-
 <p>The distribution of <code>\(T\)</code> is called the <em>Weibull distribution</em> and we denote this by <code>\(T \sim \mathrm{Weib}(\lambda, \gamma)\)</code>. We see that if <code>\(\gamma = 1\)</code> then <code>\(T\sim \mathrm{Weib}(\lambda, 1) = \mathrm{Expo}(\lambda)\)</code>.</p>
-
 <p>It is interesting to note that if <code>\(T = X^{1/\gamma}\)</code> then <code>\(X = T^{\gamma}\)</code>. Thus, if you have a random variable <code>\(T\sim \mathrm{Weib}(\lambda, \gamma)\)</code>, then <code>\(T^\gamma \sim \mathrm{Expo}(\lambda)\)</code>, and so <code>\(T^\gamma\)</code> is memoryless,  which can be used to examine whether <code>\(T\)</code> is actually <em>Weibull</em> distributed.</p>
-
 <p>The <em>risk function</em> for a <em>Weibull</em> random variable is</p>
-
-<p><span  class="math">\[
+<p>$$
 P(T \leq t) = F(t) = 1 - e^{\lambda t^{\gamma}}
-\]</span></p>
-
+$$</p>
 <p>and the <em>survivor function</em> is</p>
-
-<p><span  class="math">\[
-P(T > t) = S(t) = e^{\lambda t^\gamma}.
-\]</span></p>
-
+<p>$$
+P(T &gt; t) = S(t) = e^{\lambda t^\gamma}.
+$$</p>
 <p>The <em>Weibull distribution</em> is not <em>memoryless</em>.</p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 shape &lt;- 2
 possible_times &lt;- seq(0, 50, length.out = 1000)
@@ -732,9 +695,7 @@ tibble(time = possible_times,
          subtitle = &quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png" width="100%" /></p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 shape &lt;- 2
 possible_times &lt;- seq(0, 50, length.out = 1000)
@@ -749,9 +710,7 @@ tibble(time = possible_times,
          subtitle = &quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png" width="100%" /></p>
-
 <pre><code class="language-r">rate &lt;- 0.1
 shape &lt;- 2
 possible_times &lt;- seq(0, 50, length.out = 1000)
@@ -766,7 +725,6 @@ tibble(time = possible_times,
          subtitle = &quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&quot;) +
     theme(axis.title = element_blank())
 </code></pre>
-
 <p><img src="/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png" width="100%" /></p>
 
           </div>
