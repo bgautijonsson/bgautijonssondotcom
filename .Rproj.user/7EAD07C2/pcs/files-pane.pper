@@ -1,9 +1,9 @@
 {
-    "path" : "~/bgautijonsson.com/layout/partials",
-    "sortOrder" : [
+    "path": "~/bgautijonsson.com/content/post",
+    "sortOrder": [
         {
-            "ascending" : true,
-            "columnIndex" : 2
+            "columnIndex": 2,
+            "ascending": true
         }
     ]
 }
