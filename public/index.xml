@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Brynjólfur Gauti Jónsson</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://bgautijonsson.com/</link>
+      <atom:link href="https://bgautijonsson.com/index.xml" rel="self" type="application/rss+xml" />
     <description>Brynjólfur Gauti Jónsson</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/avatar.jpg</url>
+      <url>https://bgautijonsson.com/img/avatar.jpg</url>
       <title>Brynjólfur Gauti Jónsson</title>
-      <link>/</link>
+      <link>https://bgautijonsson.com/</link>
     </image>
     
     <item>
       <title>Example Page 1</title>
-      <link>/courses/example/example1/</link>
+      <link>https://bgautijonsson.com/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example1/</guid>
+      <guid>https://bgautijonsson.com/courses/example/example1/</guid>
       <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -35,9 +35,9 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>/courses/example/example2/</link>
+      <link>https://bgautijonsson.com/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example2/</guid>
+      <guid>https://bgautijonsson.com/courses/example/example2/</guid>
       <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -55,50 +55,31 @@
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>/talk/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>/talk/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using 
-&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Tölfræði og vísindi eru óaðskiljanleg fyrirbæri</title>
-      <link>/post/tolfr%C3%A6%C3%B0i-og-visindi-eru-oa%C3%B0skiljanleg-fyrirb%C3%A6ri/</link>
+      <link>https://bgautijonsson.com/post/tolfr%C3%A6%C3%B0i-og-visindi-eru-oa%C3%B0skiljanleg-fyrirb%C3%A6ri/</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>/post/tolfr%C3%A6%C3%B0i-og-visindi-eru-oa%C3%B0skiljanleg-fyrirb%C3%A6ri/</guid>
+      <guid>https://bgautijonsson.com/post/tolfr%C3%A6%C3%B0i-og-visindi-eru-oa%C3%B0skiljanleg-fyrirb%C3%A6ri/</guid>
       <description>&lt;p&gt;Smá meira um Matthew Walker:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2020/10/07/alexey-guzey-plays-stat-detective-how-many-observations-are-in-each-bar-of-this-graph/&#34;&gt;https://statmodeling.stat.columbia.edu/2020/10/07/alexey-guzey-plays-stat-detective-how-many-observations-are-in-each-bar-of-this-graph/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2020/10/07/alexey-guzey-plays-stat-detective-how-many-observations-are-in-each-bar-of-this-graph/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://statmodeling.stat.columbia.edu/2020/10/07/alexey-guzey-plays-stat-detective-how-many-observations-are-in-each-bar-of-this-graph/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;When you start trimming your data to fit your preconceptions or to fit the story you want to tell, you’ve given up your ability to learn. You’re no longer doing science—and you might not be doing good education either.&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Þetta tengist vel færslu Andrew frá 5. október:&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;The view that the scientific process is “red tape,” just a bunch of hoops you need to jump through so you can move on with your life&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2020/10/05/what-is-the-purpose-of-the-scientific-process-according-to-the-people-who-are-in-charge-of-some-social-science-journals/&#34;&gt;https://statmodeling.stat.columbia.edu/2020/10/05/what-is-the-purpose-of-the-scientific-process-according-to-the-people-who-are-in-charge-of-some-social-science-journals/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2020/10/05/what-is-the-purpose-of-the-scientific-process-according-to-the-people-who-are-in-charge-of-some-social-science-journals/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://statmodeling.stat.columbia.edu/2020/10/05/what-is-the-purpose-of-the-scientific-process-according-to-the-people-who-are-in-charge-of-some-social-science-journals/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ég held að mörgum vísindamönnum líði einmitt svona. Þau hafa niðurstöður í kollinum sínum (svefn hjálpar heilsu t.d.) og markmiðið er alltaf að birta grein. Tölfræði er bara einhver pirrandi hindrun sem þarf að ljúka við í leiðinni.&lt;/p&gt;
 &lt;p&gt;Kannski er þetta vegna þess hvernig við kennum tölfræði, en mér finnst oft vanta vísindin í tölfræðikennslu. Án vísinda er tölfræði bara einhver fíflaleikur og án tölfræði eru vísindi bara stjörnuspeki.&lt;/p&gt;
 &lt;p&gt;Hér er frábært dæmi um hvernig tölfræði og vísindi eru óaðskiljanleg úr frábæru bók Deborah mayo, Statistical Inference as Severe Testing. Lesandi bækur um eðlisfræði líður manni eins og að Einstein hafi birt afstæðiskenninguna og hún bara strax orðin &amp;ldquo;rétt&amp;rdquo;, en sú er alls ekki raunin. Hér er fjallað um  tölfræðilegan samanburð á afstæðiskenningunni og kenningum Newtons:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://errorstatistics.com/2018/11/30/where-are-fisher-neyman-pearson-in-1919-opening-of-excursion-3/&#34;&gt;https://errorstatistics.com/2018/11/30/where-are-fisher-neyman-pearson-in-1919-opening-of-excursion-3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://errorstatistics.com/2018/11/30/where-are-fisher-neyman-pearson-in-1919-opening-of-excursion-3/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://errorstatistics.com/2018/11/30/where-are-fisher-neyman-pearson-in-1919-opening-of-excursion-3/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>First post!</title>
-      <link>/post/first-post/</link>
+      <link>https://bgautijonsson.com/post/first-post/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/first-post/</guid>
+      <guid>https://bgautijonsson.com/post/first-post/</guid>
       <description>&lt;p&gt;The other day I decided to try my hand at making a website with &lt;code&gt;blogdown&lt;/code&gt; and building up to a regular blog. One of my goals is to write posts often but I wil keep them short and uninteresting if needed!&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m thinking about submitting a talk at 
 &lt;a href=&#34;https://mc-stan.org/events/stancon2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StanCon2020&lt;/a&gt; about my Master&amp;rsquo;s thesis. The thesis is about the Lee Carter model with extensions. I&amp;rsquo;ve written up the model in Stan and extended it by applying Gaussian process priors to the age effects, but more on that later. Let&amp;rsquo;s just end this post on a quote:&lt;/p&gt;
@@ -113,9 +94,9 @@
     
     <item>
       <title>Hello World!</title>
-      <link>/post/hello-world/</link>
+      <link>https://bgautijonsson.com/post/hello-world/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/post/hello-world/</guid>
+      <guid>https://bgautijonsson.com/post/hello-world/</guid>
       <description>&lt;h1 id=&#34;this-is-a-header&#34;&gt;This is a header&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse); library(kableExtra);  library(cowplot); library(scales); library(DT); library(plotly)
 theme_set(theme_cowplot() +  
@@ -132,7 +113,7 @@ theme_set(theme_cowplot() +
   labs(title = &amp;quot;This is a plot&amp;quot;)
 p
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplotly(p)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!--html_preserve--&gt;&lt;div id=&#34;htmlwidget-6c74a08adfe00004ff4e&#34; style=&#34;width:100%;height:416.64px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;
@@ -183,9 +164,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>/publication/preprint/</link>
+      <link>https://bgautijonsson.com/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint/</guid>
+      <guid>https://bgautijonsson.com/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
@@ -198,9 +179,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://bgautijonsson.com/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://bgautijonsson.com/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -250,15 +231,15 @@ $$&lt;/p&gt;
 {{% fragment %}} Three {{% /fragment %}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
-One
+&lt;span class=&#34;fragment &#34; &gt;
+   One 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-&lt;strong&gt;Two&lt;/strong&gt;
+   **Two** 
 &lt;/span&gt;
 &lt;span class=&#34;fragment &#34; &gt;
-Three
-&lt;/span&gt;&lt;/p&gt;
+   Three 
+&lt;/span&gt;
 &lt;hr&gt;
 &lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
 &lt;ul&gt;
@@ -279,6 +260,7 @@ Three
 &lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;/aside&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
@@ -331,9 +313,9 @@ Three
     
     <item>
       <title>Survival Analysis</title>
-      <link>/courses/survival/probabilitydistributions/</link>
+      <link>https://bgautijonsson.com/courses/survival/probabilitydistributions/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/courses/survival/probabilitydistributions/</guid>
+      <guid>https://bgautijonsson.com/courses/survival/probabilitydistributions/</guid>
       <description>&lt;h2 id=&#34;some-probability-distributions&#34;&gt;Some Probability Distributions&lt;/h2&gt;
 &lt;h3 id=&#34;discrete&#34;&gt;Discrete&lt;/h3&gt;
 &lt;h4 id=&#34;bernoulli&#34;&gt;Bernoulli&lt;/h4&gt;
@@ -353,7 +335,7 @@ tibble(outcome = c(&amp;quot;Success&amp;quot;, &amp;quot;Failure&amp;quot;),
     labs(title = &amp;quot;Example Bernoulli variable&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;binomial&#34;&gt;Binomial&lt;/h4&gt;
 &lt;p&gt;Suppose that we have &lt;em&gt;n independent&lt;/em&gt; Bernoulli random variables sampled from an experiment, each with the same probability, &lt;code&gt;\(p\)&lt;/code&gt;, of success. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of successes. Then &lt;code&gt;\(X\)&lt;/code&gt; has a &lt;em&gt;Binomial distribution&lt;/em&gt; with parameters &lt;code&gt;\(n\)&lt;/code&gt; and &lt;code&gt;\(p\)&lt;/code&gt;. We write &lt;code&gt;\(X \sim \mathrm{Bin}(n, p)\)&lt;/code&gt;. Thus the &lt;code&gt;\(\mathrm{Bern}(p)\)&lt;/code&gt; distribution is the same as &lt;code&gt;\(\mathrm{Bin}(1, p)\)&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;coin_tosses &amp;lt;- 100
@@ -369,7 +351,7 @@ tibble(outcome = possible_outcomes,
          subtitle = &amp;quot;Probability of obtaining X heads in 100 tosses&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;geometric&#34;&gt;Geometric&lt;/h4&gt;
 &lt;p&gt;Consider a sequence of independent Bernoulli trials, each with the same success probability, &lt;code&gt;\(p\)&lt;/code&gt;, and imagine performing trials until a success occurs. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of &lt;em&gt;failures&lt;/em&gt; before the first successful trial. Then &lt;code&gt;\(X\)&lt;/code&gt; has the &lt;em&gt;Geometric distribution&lt;/em&gt; with parameter &lt;code&gt;\(p\)&lt;/code&gt;, denoted by &lt;code&gt;\(X \sim \mathrm{Geom}(p)\)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;This is an important distribution for survival analysis. Imagine that on each day there is a constant probability, &lt;code&gt;\(p\)&lt;/code&gt;, that some event happens. Then the number of days before the event happens follows a &lt;code&gt;\(\mathrm{Geom}(p)\)&lt;/code&gt; distribution. Note that the &lt;em&gt;Geometric&lt;/em&gt; distribution only models whole numbers, so we cannot wait for &lt;code&gt;\(4.5\)&lt;/code&gt; days when working with this distribution.&lt;/p&gt;
@@ -387,7 +369,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X days until event happens with risk 10%&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h3 id=&#34;continuous&#34;&gt;Continuous&lt;/h3&gt;
 &lt;p&gt;For continuous variables it makes no sense to ask &lt;em&gt;what is the probability that X will be equal to x?&lt;/em&gt; since that probability, &lt;code&gt;\(P(X = x)\)&lt;/code&gt; is always &lt;code&gt;\(0\)&lt;/code&gt;. Consider the probability that the temperature outside is 23 degrees celsius. This probability is &lt;code&gt;\(0\)&lt;/code&gt; since the temperature outside is never exactly 23 degrees, rather it might be 23.01231 or 22.999923, but it is never exactly 23. Instead of the probability that a continuous random variable equals some value we talk of the &lt;em&gt;density&lt;/em&gt; of the distribution at that value.&lt;/p&gt;
 &lt;p&gt;On the other hand we &lt;em&gt;can&lt;/em&gt; talk about the probability that a continuous random variable, &lt;code&gt;\(X\)&lt;/code&gt;, is less than or equal to &lt;code&gt;\(x\)&lt;/code&gt; or &lt;code&gt;\(P(X \leq x)\)&lt;/code&gt;. Thus we can ask &lt;em&gt;what is the probability that the temporature outside is less than  or equall to 23?&lt;/em&gt; or &lt;code&gt;\(P(\mathrm{Temp} \leq 23)\)&lt;/code&gt;.&lt;/p&gt;
@@ -414,7 +396,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time.\nSince an exponential waiting time can take on any values we don&#39;t see a step function but a smooth curve.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 risk_function &amp;lt;- pexp(possible_times, rate)
@@ -428,7 +410,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 survival_function &amp;lt;- 1 - pexp(possible_times, rate)
@@ -442,7 +424,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;weibull&#34;&gt;Weibull&lt;/h4&gt;
 &lt;p&gt;Remarkably, simply raising an exponential random variable to a power dramatically improves the flexibility and applicability of the distribution. Let &lt;code&gt;\(X \sim \mathrm{Expo}(\lambda)\)&lt;/code&gt; and &lt;code&gt;\(T = X^{1/\gamma}\)&lt;/code&gt; with &lt;code&gt;\(\lambda &amp;gt; 0\)&lt;/code&gt;, &lt;code&gt;\(\gamma &amp;gt; 0\)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The distribution of &lt;code&gt;\(T\)&lt;/code&gt; is called the &lt;em&gt;Weibull distribution&lt;/em&gt; and we denote this by &lt;code&gt;\(T \sim \mathrm{Weib}(\lambda, \gamma)\)&lt;/code&gt;. We see that if &lt;code&gt;\(\gamma = 1\)&lt;/code&gt; then &lt;code&gt;\(T\sim \mathrm{Weib}(\lambda, 1) = \mathrm{Expo}(\lambda)\)&lt;/code&gt;.&lt;/p&gt;
@@ -469,7 +451,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -484,7 +466,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -499,41 +481,41 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;100%&#34; /&gt;
 </description>
     </item>
     
     <item>
       <title>Privacy Policy</title>
-      <link>/privacy/</link>
+      <link>https://bgautijonsson.com/privacy/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/privacy/</guid>
+      <guid>https://bgautijonsson.com/privacy/</guid>
       <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Terms</title>
-      <link>/terms/</link>
+      <link>https://bgautijonsson.com/terms/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
+      <guid>https://bgautijonsson.com/terms/</guid>
       <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Personalized Risk Calculator</title>
-      <link>/project/ah%C3%A6ttureiknir/</link>
+      <link>https://bgautijonsson.com/project/ah%C3%A6ttureiknir/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/ah%C3%A6ttureiknir/</guid>
+      <guid>https://bgautijonsson.com/project/ah%C3%A6ttureiknir/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An example journal article</title>
-      <link>/publication/journal-article/</link>
+      <link>https://bgautijonsson.com/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/</guid>
+      <guid>https://bgautijonsson.com/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -551,9 +533,9 @@ tibble(time = possible_times,
     
     <item>
       <title>An example conference paper</title>
-      <link>/publication/conference-paper/</link>
+      <link>https://bgautijonsson.com/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/</guid>
+      <guid>https://bgautijonsson.com/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -571,9 +553,9 @@ tibble(time = possible_times,
     
     <item>
       <title>Survival Analysis (LÝÐ079F)</title>
-      <link>/project/survival-analysis/</link>
+      <link>https://bgautijonsson.com/project/survival-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/project/survival-analysis/</guid>
+      <guid>https://bgautijonsson.com/project/survival-analysis/</guid>
       <description></description>
     </item>
     
