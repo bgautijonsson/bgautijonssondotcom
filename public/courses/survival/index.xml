@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Survival Analysis | Brynjólfur Gauti Jónsson</title>
-    <link>/courses/survival/</link>
-      <atom:link href="/courses/survival/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://bgautijonsson.com/courses/survival/</link>
+      <atom:link href="https://bgautijonsson.com/courses/survival/index.xml" rel="self" type="application/rss+xml" />
     <description>Survival Analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/avatar.jpg</url>
+      <url>https://bgautijonsson.com/img/avatar.jpg</url>
       <title>Survival Analysis</title>
-      <link>/courses/survival/</link>
+      <link>https://bgautijonsson.com/courses/survival/</link>
     </image>
     
     <item>
       <title>Survival Analysis</title>
-      <link>/courses/survival/probabilitydistributions/</link>
+      <link>https://bgautijonsson.com/courses/survival/probabilitydistributions/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/courses/survival/probabilitydistributions/</guid>
+      <guid>https://bgautijonsson.com/courses/survival/probabilitydistributions/</guid>
       <description>&lt;h2 id=&#34;some-probability-distributions&#34;&gt;Some Probability Distributions&lt;/h2&gt;
 &lt;h3 id=&#34;discrete&#34;&gt;Discrete&lt;/h3&gt;
 &lt;h4 id=&#34;bernoulli&#34;&gt;Bernoulli&lt;/h4&gt;
@@ -36,7 +36,7 @@ tibble(outcome = c(&amp;quot;Success&amp;quot;, &amp;quot;Failure&amp;quot;),
     labs(title = &amp;quot;Example Bernoulli variable&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;binomial&#34;&gt;Binomial&lt;/h4&gt;
 &lt;p&gt;Suppose that we have &lt;em&gt;n independent&lt;/em&gt; Bernoulli random variables sampled from an experiment, each with the same probability, &lt;code&gt;\(p\)&lt;/code&gt;, of success. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of successes. Then &lt;code&gt;\(X\)&lt;/code&gt; has a &lt;em&gt;Binomial distribution&lt;/em&gt; with parameters &lt;code&gt;\(n\)&lt;/code&gt; and &lt;code&gt;\(p\)&lt;/code&gt;. We write &lt;code&gt;\(X \sim \mathrm{Bin}(n, p)\)&lt;/code&gt;. Thus the &lt;code&gt;\(\mathrm{Bern}(p)\)&lt;/code&gt; distribution is the same as &lt;code&gt;\(\mathrm{Bin}(1, p)\)&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;coin_tosses &amp;lt;- 100
@@ -52,7 +52,7 @@ tibble(outcome = possible_outcomes,
          subtitle = &amp;quot;Probability of obtaining X heads in 100 tosses&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;geometric&#34;&gt;Geometric&lt;/h4&gt;
 &lt;p&gt;Consider a sequence of independent Bernoulli trials, each with the same success probability, &lt;code&gt;\(p\)&lt;/code&gt;, and imagine performing trials until a success occurs. Let &lt;code&gt;\(X\)&lt;/code&gt; be the number of &lt;em&gt;failures&lt;/em&gt; before the first successful trial. Then &lt;code&gt;\(X\)&lt;/code&gt; has the &lt;em&gt;Geometric distribution&lt;/em&gt; with parameter &lt;code&gt;\(p\)&lt;/code&gt;, denoted by &lt;code&gt;\(X \sim \mathrm{Geom}(p)\)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;This is an important distribution for survival analysis. Imagine that on each day there is a constant probability, &lt;code&gt;\(p\)&lt;/code&gt;, that some event happens. Then the number of days before the event happens follows a &lt;code&gt;\(\mathrm{Geom}(p)\)&lt;/code&gt; distribution. Note that the &lt;em&gt;Geometric&lt;/em&gt; distribution only models whole numbers, so we cannot wait for &lt;code&gt;\(4.5\)&lt;/code&gt; days when working with this distribution.&lt;/p&gt;
@@ -70,7 +70,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X days until event happens with risk 10%&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h3 id=&#34;continuous&#34;&gt;Continuous&lt;/h3&gt;
 &lt;p&gt;For continuous variables it makes no sense to ask &lt;em&gt;what is the probability that X will be equal to x?&lt;/em&gt; since that probability, &lt;code&gt;\(P(X = x)\)&lt;/code&gt; is always &lt;code&gt;\(0\)&lt;/code&gt;. Consider the probability that the temperature outside is 23 degrees celsius. This probability is &lt;code&gt;\(0\)&lt;/code&gt; since the temperature outside is never exactly 23 degrees, rather it might be 23.01231 or 22.999923, but it is never exactly 23. Instead of the probability that a continuous random variable equals some value we talk of the &lt;em&gt;density&lt;/em&gt; of the distribution at that value.&lt;/p&gt;
 &lt;p&gt;On the other hand we &lt;em&gt;can&lt;/em&gt; talk about the probability that a continuous random variable, &lt;code&gt;\(X\)&lt;/code&gt;, is less than or equal to &lt;code&gt;\(x\)&lt;/code&gt; or &lt;code&gt;\(P(X \leq x)\)&lt;/code&gt;. Thus we can ask &lt;em&gt;what is the probability that the temporature outside is less than  or equall to 23?&lt;/em&gt; or &lt;code&gt;\(P(\mathrm{Temp} \leq 23)\)&lt;/code&gt;.&lt;/p&gt;
@@ -97,7 +97,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time.\nSince an exponential waiting time can take on any values we don&#39;t see a step function but a smooth curve.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 risk_function &amp;lt;- pexp(possible_times, rate)
@@ -111,7 +111,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 possible_times &amp;lt;- seq(0, 50)
 survival_function &amp;lt;- 1 - pexp(possible_times, rate)
@@ -125,7 +125,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time.&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;h4 id=&#34;weibull&#34;&gt;Weibull&lt;/h4&gt;
 &lt;p&gt;Remarkably, simply raising an exponential random variable to a power dramatically improves the flexibility and applicability of the distribution. Let &lt;code&gt;\(X \sim \mathrm{Expo}(\lambda)\)&lt;/code&gt; and &lt;code&gt;\(T = X^{1/\gamma}\)&lt;/code&gt; with &lt;code&gt;\(\lambda &amp;gt; 0\)&lt;/code&gt;, &lt;code&gt;\(\gamma &amp;gt; 0\)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The distribution of &lt;code&gt;\(T\)&lt;/code&gt; is called the &lt;em&gt;Weibull distribution&lt;/em&gt; and we denote this by &lt;code&gt;\(T \sim \mathrm{Weib}(\lambda, \gamma)\)&lt;/code&gt;. We see that if &lt;code&gt;\(\gamma = 1\)&lt;/code&gt; then &lt;code&gt;\(T\sim \mathrm{Weib}(\lambda, 1) = \mathrm{Expo}(\lambda)\)&lt;/code&gt;.&lt;/p&gt;
@@ -152,7 +152,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Density of waiting X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -167,7 +167,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting X OR LESS amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;rate &amp;lt;- 0.1
 shape &amp;lt;- 2
 possible_times &amp;lt;- seq(0, 50, length.out = 1000)
@@ -182,7 +182,7 @@ tibble(time = possible_times,
          subtitle = &amp;quot;Probability of waiting MORE THAN X amount of time until event happens with rate 0.1 per unit of time and shape parameter 2.\nThis means that the square root of the survival time follows an exponential distribution&amp;quot;) +
     theme(axis.title = element_blank())
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;100%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://bgautijonsson.com/courses/survival/probabilitydistributions_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;100%&#34; /&gt;
 </description>
     </item>
     
