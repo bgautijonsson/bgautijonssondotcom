@@ -16,6 +16,7 @@ tags:
   - tables
 image:
   placement: 1
+  caption: Cowplot Bebop
   alt_text: A fable?
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
