@@ -14,6 +14,9 @@ tags:
   - rstudio
   - ggplot
   - tables
+image:
+  placement: 1
+  alt_text: A fable?
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -22,7 +25,7 @@ tags:
 
 
 
-I've seen this kind of plot poking around, but I didn't really think about them until the other day I was asked about how to make them. Here I will walk through making one of these plots using the `ggplot2` and `cowplot` packages.
+I've seen this kind of figure poking around, but I didn't really think about them until the other day I was asked about how to make one in R. Here I will walk through making one of these plots using the `ggplot2` and `cowplot` packages.
 
 To start with I have some fake data, `d`.
 
@@ -127,7 +130,7 @@ d |>
 
 ### The Forest Plot
 
-The forest plot is not hard to do.
+The forest plot itself is not hard to do. Notice how I create this striped pattern with ` geom_vline(aes(xintercept = name), col = "grey95", size = 5)`. I'll do the same thing to the table part of the figure later.
 
 
 ```r
@@ -150,7 +153,7 @@ p1
 
 ### The Table
 
-To make the table look nice I convert the numbers to text and clean them up so that the text is justified nicely when plotting it
+To make the table look nice I convert the numbers to text and clean them up so that the text is justified nicely when plotting it. I did some manual tuning of the margins to make the plot and table line up nicely. 
 
 
 ```r
@@ -188,7 +191,7 @@ p2
 
 #### The finished bottom row
 
-Now we have nicely alligned the plot and table. 
+Now we have alligned the plot and table. If you zoom in you might see that they don't line up perfectly. I am not liable for any bodily harm caused by this.
 
 
 ```r
