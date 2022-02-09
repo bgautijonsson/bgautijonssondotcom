@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R Markdown | Brynjólfur Gauti Jónsson</title>
-    <link>https://bgautijonsson.com/tags/r-markdown/</link>
-      <atom:link href="https://bgautijonsson.com/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    <title>R Markdown | Brynjólfur Gauti Guðrúnar Jónsson</title>
+    <link>/tags/r-markdown/</link>
+      <atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
     <description>R Markdown</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 09 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://bgautijonsson.com/img/avatar.jpg</url>
+      <url>/img/avatar.jpg</url>
       <title>R Markdown</title>
-      <link>https://bgautijonsson.com/tags/r-markdown/</link>
+      <link>/tags/r-markdown/</link>
     </image>
     
     <item>
       <title>First post!</title>
-      <link>https://bgautijonsson.com/post/first-post/</link>
+      <link>/post/first-post/</link>
       <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://bgautijonsson.com/post/first-post/</guid>
+      <guid>/post/first-post/</guid>
       <description>&lt;p&gt;The other day I decided to try my hand at making a website with &lt;code&gt;blogdown&lt;/code&gt; and building up to a regular blog. One of my goals is to write posts often but I wil keep them short and uninteresting if needed!&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m thinking about submitting a talk at 
 &lt;a href=&#34;https://mc-stan.org/events/stancon2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StanCon2020&lt;/a&gt; about my Master&amp;rsquo;s thesis. The thesis is about the Lee Carter model with extensions. I&amp;rsquo;ve written up the model in Stan and extended it by applying Gaussian process priors to the age effects, but more on that later. Let&amp;rsquo;s just end this post on a quote:&lt;/p&gt;
@@ -31,9 +31,9 @@
     
     <item>
       <title>Hello World!</title>
-      <link>https://bgautijonsson.com/post/hello-world/</link>
+      <link>/post/hello-world/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://bgautijonsson.com/post/hello-world/</guid>
+      <guid>/post/hello-world/</guid>
       <description>&lt;h1 id=&#34;this-is-a-header&#34;&gt;This is a header&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyverse); library(kableExtra);  library(cowplot); library(scales); library(DT); library(plotly)
 theme_set(theme_cowplot() +  
@@ -50,7 +50,7 @@ theme_set(theme_cowplot() +
   labs(title = &amp;quot;This is a plot&amp;quot;)
 p
 &lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&#34;https://bgautijonsson.com/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;img src=&#34;/post/2020-03-01-hello-world_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;100%&#34; /&gt;
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplotly(p)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;!--html_preserve--&gt;&lt;div id=&#34;htmlwidget-6c74a08adfe00004ff4e&#34; style=&#34;width:100%;height:416.64px;&#34; class=&#34;plotly html-widget&#34;&gt;&lt;/div&gt;

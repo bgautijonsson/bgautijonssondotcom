@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tables | Brynjólfur Gauti Guðrúnar Jónsson</title>
+    <link>/tags/tables/</link>
+      <atom:link href="/tags/tables/index.xml" rel="self" type="application/rss+xml" />
+    <description>tables</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>tables</title>
+      <link>/tags/tables/</link>
+    </image>
+    
+    <item>
+      <title>Forest Plots with Built-In Tables</title>
+      <link>/post/2022-02-09-forest-plots-with-built-in-tables/</link>
+      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>/post/2022-02-09-forest-plots-with-built-in-tables/</guid>
+      <description>&lt;script src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;p&gt;I&amp;rsquo;ve seen this kind of plot poking around, but I didn&amp;rsquo;t really think about them until the other day I was asked about how to make them. Here I will walk through making one of these plots using the &lt;code&gt;ggplot2&lt;/code&gt; and &lt;code&gt;cowplot&lt;/code&gt; packages.&lt;/p&gt;
+&lt;p&gt;To start with I have some fake data, &lt;code&gt;d&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;d |&amp;gt; 
+    kable(format = &amp;quot;html&amp;quot;) |&amp;gt; 
+    kable_styling(full_width = F)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table&#34; style=&#34;width: auto !important; margin-left: auto; margin-right: auto;&#34;&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style=&#34;text-align:left;&#34;&gt; name &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; mean &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; lower &lt;/th&gt;
+   &lt;th style=&#34;text-align:right;&#34;&gt; upper &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Covfefe &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.1989430 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0707825 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.358700 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Coffee &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.8509518 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.5589701 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 2.227752 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Variable &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.2181512 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0834045 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.411683 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Covariate &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.1970336 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0699671 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.342737 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Predictor &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.9085823 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.8049225 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Smoking &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.8770238 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.7447709 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Age &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.9344551 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.8305984 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Uranium &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.9177338 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.8021060 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Stuff &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0760010 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0000000 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.216474 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Thing &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.9143605 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.7753231 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Koffing &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0686924 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0000000 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.178642 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Coughing &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0648236 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.0000000 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.194998 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style=&#34;text-align:left;&#34;&gt; Polvo &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.9227277 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 0.8097846 &lt;/td&gt;
+   &lt;td style=&#34;text-align:right;&#34;&gt; 1.000000 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;the-forest-plot&#34;&gt;The Forest Plot&lt;/h3&gt;
+&lt;p&gt;The forest plot is not hard to do.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;p1 &amp;lt;- d |&amp;gt; 
+    mutate(name = fct_reorder(name, mean)) |&amp;gt; 
+    ggplot(aes(x = name, y = mean,
+                  ymin = lower, ymax = upper)) +
+    geom_vline(aes(xintercept = name), col = &amp;quot;grey95&amp;quot;, size = 5) +
+    geom_hline(yintercept = 1, lty = 2) +
+    geom_point() +
+    geom_linerange() +
+    coord_flip() +
+    labs(x = NULL, y = NULL) +
+    theme(plot.margin = margin(t = 5, r = -4, b = 5, l = 5))
+
+p1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;h3 id=&#34;the-table&#34;&gt;The Table&lt;/h3&gt;
+&lt;p&gt;To make the table look nice I convert the numbers to text and clean them up so that the text is justified nicely when plotting it&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;p2 &amp;lt;- d |&amp;gt; 
+    mutate(name = fct_reorder(name, mean),
+           mean = round(mean, 2),
+           mean = str_pad(mean, width = 4, side = &amp;quot;right&amp;quot;, pad = &amp;quot;0&amp;quot;),
+           lower = round(lower, 2),
+           lower = as.character(lower),
+           lower = ifelse(lower == &amp;quot;1&amp;quot;, &amp;quot;1.00&amp;quot;, lower),
+           lower = str_pad(lower, width = 4, side = &amp;quot;right&amp;quot;, pad = &amp;quot;0&amp;quot;),
+           upper = round(upper, 2),
+           upper = as.character(upper),
+           upper = ifelse(upper == &amp;quot;1&amp;quot;, &amp;quot;1.00&amp;quot;, upper),
+           upper = str_pad(upper, width = 4, side = &amp;quot;right&amp;quot;, pad = &amp;quot;0&amp;quot;),
+           ci = str_c(lower, &amp;quot;, &amp;quot;, upper)) |&amp;gt; 
+    ggplot(aes(x = name)) +
+    geom_vline(aes(xintercept = name), col = &amp;quot;grey95&amp;quot;, size = 5) +
+    geom_text(aes(label = mean, y = 1)) +
+    geom_text(aes(label = ci, y = 1.07)) +
+    coord_flip(ylim = c(0.99, 1.1)) +
+    theme(axis.title = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.line.y = element_blank(),
+          panel.border = element_blank(), 
+          panel.grid = element_blank(), 
+          plot.background = element_blank(),
+          plot.margin = margin(t = 5, r = 5, b = 19.3, l = 0))
+
+p2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;h4 id=&#34;the-finished-bottom-row&#34;&gt;The finished bottom row&lt;/h4&gt;
+&lt;p&gt;Now we have nicely alligned the plot and table.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;bottom_row &amp;lt;- plot_grid(p1, p2, nrow = 1, rel_widths = c(1, 0.3)) 
+
+bottom_row
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;h3 id=&#34;the-headers&#34;&gt;The headers&lt;/h3&gt;
+&lt;p&gt;I admit that this is a pretty handwavy manual way to make the header fit, and there is probably a nice way to automatically fit this using the coordinate system.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;top_row &amp;lt;- ggplot(data = tibble()) +
+    geom_text(aes(y = 1, x = 0.02, label = &amp;quot;Variable&amp;quot;), size = 5) +
+    geom_text(aes(y = 1, x = 0.84, label = &amp;quot;Mean&amp;quot;), size = 5) +
+    geom_text(aes(y = 1, x = 0.98, label = &amp;quot;95% CI&amp;quot;), size = 5) +
+    coord_cartesian(xlim = c(0, 1)) +
+    theme_void() +
+    theme(plot.margin = margin(t = 0, r = 5, b = 0, l = 5),
+          axis.line.x.bottom = element_line())
+
+
+top_row
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;h3 id=&#34;putting-it-all-together&#34;&gt;Putting it all together&lt;/h3&gt;
+&lt;p&gt;And so we come to the finished plot. If we wrangle the &lt;code&gt;rel_heights&lt;/code&gt; setting a little bit we can get a pretty nice looking forest plot and table hybrid.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plot_grid(top_row, bottom_row, ncol = 1, rel_heights = c(0.07, 1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;/post/2022-02-09-forest-plots-with-built-in-tables/index_files/figure-html/finished_plot-1.png&#34; width=&#34;100%&#34; /&gt;
+&lt;p&gt;This was actually less of an inconvenience than I thought. The mixture of &lt;code&gt;ggplot2&lt;/code&gt; and &lt;code&gt;cowplot&lt;/code&gt; made this a pretty easy task.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,34 +1,11 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
-education:
-  courses:
-  - course: PhD in Biostatistics
-    institution: University of Iceland
-    year: Current
-  - course: MSc in Statistics
-    institution: University of Iceland
-    year: 2020
-  - course: BSc in Psychology
-    institution: University of Iceland
-    year: 2018
-email: "bgj2@hi.is"
-interests:
-- Statistics
-- Data Visualization
-- Teaching methods
-- Music
-name: Brynjólfur Gauti Jónsson
+name: Brynjólfur Gauti Guðrúnar Jónsson
 organizations:
 - name: University of Iceland
-  url: "https://www.hi.is/staff/bgj2"
-role: Teacher / Statistician
+role: PhD Student, Statistics
 social:
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/bgautijonsson
@@ -39,9 +16,10 @@ social:
   icon_pack: fab
   link: https://github.com/bgautijonsson
 superuser: true
-user_groups:
-- Researchers
-- Visitors
 ---
 
-I am a graduate student of statistics at the University of Iceland.
+I am a PhD student of statistics at the University of Iceland. I'm can't be bothered to tell you more about me at the moment so here are some pictures of my dog, Toby. When I finally write something about myself you'll be the first to know!
+
+![](IMG_0819.jpeg)
+
+![](IMG_0895.jpeg)
